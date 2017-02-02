@@ -1,0 +1,38 @@
+<html ng-app="ContactApp">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="contact.js"></script>
+    <script src="appName.service.js"></script>
+    <script src="appConfig.service.js"></script>
+    <script src="contact.controller.js"></script>
+    <script src="contact.data.service.js"></script>
+</head>
+
+<body>
+    <!--<div ng-controller="HeaderCtrl as head">
+        <h3>{{head.appTitle}}</h3>
+        <h6>{{head.buildDate}}</h6></div>-->
+    <div class="container" ng-controller="ContactCtrl as ctrl">
+        <div class="row">
+            <ol class="list-group">
+                <li class="list-group-item" ng-repeat="post in ctrl.posts" ng-click="ctrl.selectedPost($index)"> <span><h5>{{post.firstName + " " + post.lastName}}</h5></span> <b>{{post.postName}}</b>
+                    <input type=text ng-model="post.postName" ng-show="ctrl.editMode"></input><span><button ng-click ="ctrl.toggleEditMode()">Edit</button></span> </div>
+        </li>
+        <div class="row">
+            <ul class="list-group">
+                <div class="alert alert-success" ng-if="ctrl.successMessage">{{ctrl.successMessage}} </div>
+                <div ng-repeat="comment in ctrl.post.comments" ng-click="ctrl.selectedComment($index)"> <span>{{comment.commentId}} :</span> <span>{{comment.author}} :</span><span ng-hide="ctrl.editModeComment"> {{comment.commentString}}</span>
+                    <input type=text ng-model="comment.commentString" ng-show="ctrl.editModeComment"></input><span><button ng-click ="ctrl.toggleEditModeComment()" ng-hide="ctrl.editModeComment">Edit</button></span><span>
+                    <button ng-click="ctrl.saveComment()" ng-show="ctrl.editModeComment">Save</button>
+                    </span> </div>
+        </div>
+    </div>
+    <!--<div ng-controller="FooterCtrl as foot">
+    <h3>{{foot.appTitle}}</h3>
+    <h6>{{foot.buildDate}}</h6></div>
+</body>-->
+
+</html>
