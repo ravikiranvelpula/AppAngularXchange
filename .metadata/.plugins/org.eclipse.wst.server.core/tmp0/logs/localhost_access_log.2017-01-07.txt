@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [07/Jan/2017:11:11:23 +0530] "OPTIONS /MessangerDemo/webapi/comments/updateComment/17 HTTP/1.1" 200 980
+0:0:0:0:0:0:0:1 - - [07/Jan/2017:11:11:24 +0530] "PUT /MessangerDemo/webapi/comments/updateComment/17 HTTP/1.1" 200 110

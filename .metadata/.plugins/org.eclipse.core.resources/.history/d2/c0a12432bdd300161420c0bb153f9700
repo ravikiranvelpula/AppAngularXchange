@@ -1,0 +1,103 @@
+package org.avinash.demo.MessangerDemo.service;
+
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.avinash.demo.MessangerDemo.model.CommentEntity;
+import org.avinash.demo.MessangerDemo.resources.CommentResourceRepository;
+import org.avinash.demo.MessangerDemo.resources.PostResourceRepository;
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+@Path("/comments")
+public class CommentService {
+	
+	CommentResourceRepository commentRepository = new CommentResourceRepository();
+	PostResourceRepository postRepository = new PostResourceRepository();
+	ObjectMapper mapper = new ObjectMapper();
+	DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm a z");
+	
+	
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("/addComment/{postId}")
+	public  String addComments(@PathParam("postId") String postId,CommentEntity comment) throws JsonGenerationException, JsonMappingException, IOException{
+		comment.setCreationDate(new Date());
+		org.avinash.demo.MessangerDemo.model.PostEntity post = postRepository.getPost(Long.valueOf(postId));
+		post.getComments().add(comment);
+		comment.setPost(post);
+		post = postRepository.addPost(post);
+		mapper.setDateFormat(df);
+		String json = mapper.writeValueAsString(post);
+		return json;
+		
+	}
+	
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/getAllComments")
+	public List<CommentEntity> getAllComments(){
+
+		return commentRepository.getAllComment();
+		}
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/getComment/{commentId}")
+	public CommentEntity getComments(@PathParam("commentId") String commentId){
+
+		return commentRepository.getComment(Long.valueOf(commentId));
+		}
+	
+	@PUT
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/updateComment/{commentId}")
+	public String UpdateComment(@PathParam("commentId") String commentId,CommentEntity comment){
+
+		CommentEntity updatedComment = null;
+		CommentEntity presentComment = commentRepository.getComment(Long.valueOf(commentId));
+		if(presentComment != null){
+			comment.setCommentId(presentComment.getCommentId());
+			comment.setCreationDate(new Date());
+			comment.setPost(presentComment.getPost());
+			updatedComment = commentRepository.updateComment(comment);
+		}
+		mapper.setDateFormat(df);
+		String json = mapper.writeValueAsString(updatedComment);
+		return json;
+		}
+	
+	
+	@DELETE
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/deleteComment/{commentId}")
+	public CommentEntity deleteComment(@PathParam("commentId") String commentId,CommentEntity comment){
+
+		CommentEntity deletedComment = null;
+		CommentEntity presentComment = commentRepository.getComment(Long.valueOf(commentId));
+		if(presentComment != null){
+			deletedComment = commentRepository.removeComment(presentComment);
+		}
+		return deletedComment;
+		}
+	
+	
+	
+}

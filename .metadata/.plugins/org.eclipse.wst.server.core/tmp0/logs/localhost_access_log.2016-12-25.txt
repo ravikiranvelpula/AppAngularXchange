@@ -1,0 +1,16 @@
+127.0.0.1 - - [25/Dec/2016:14:15:48 +0530] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:14:15:50 +0530] "GET /MessangerDemo/ HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:14:16:13 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 418
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:14:17:09 +0530] "POST /MessangerDemo/webapi/posts/addPost HTTP/1.1" 200 135
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:14:17:20 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 536
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:14:18:13 +0530] "DELETE /MessangerDemo/webapi/posts/deletePost/3 HTTP/1.1" 200 416
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:14:18:19 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 119
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:14:19:27 +0530] "POST /MessangerDemo/webapi/posts/addPost HTTP/1.1" 200 144
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:14:19:33 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 246
+127.0.0.1 - - [25/Dec/2016:14:22:57 +0530] "GET /ContactApp.html HTTP/1.1" 404 1022
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:17:40:47 +0530] "POST /MessangerDemo/webapi/comments/addComment/3 HTTP/1.1" 500 4592
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:17:40:59 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 246
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:17:42:18 +0530] "POST /MessangerDemo/webapi/comments/addComment/4 HTTP/1.1" 200 245
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:17:42:37 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 350
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:17:58:55 +0530] "POST /MessangerDemo/webapi/comments/addComment/4 HTTP/1.1" 200 380
+0:0:0:0:0:0:0:1 - - [25/Dec/2016:17:58:58 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 473

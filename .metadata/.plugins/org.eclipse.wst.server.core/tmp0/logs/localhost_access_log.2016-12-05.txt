@@ -1,0 +1,14 @@
+127.0.0.1 - - [05/Dec/2016:08:06:03 +0530] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [05/Dec/2016:08:06:15 +0530] "GET /MessangerDemo/ HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [05/Dec/2016:08:08:02 +0530] "GET /MessangerDemo/webapi/messages HTTP/1.1" 500 9213
+0:0:0:0:0:0:0:1 - - [05/Dec/2016:08:09:31 +0530] "POST /MessangerDemo/webapi/messages HTTP/1.1" 500 9213
+127.0.0.1 - - [05/Dec/2016:08:11:36 +0530] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [05/Dec/2016:08:11:57 +0530] "GET /MessangerDemo/ HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [05/Dec/2016:08:13:53 +0530] "POST /MessangerDemo/webapi/messages HTTP/1.1" 200 55
+127.0.0.1 - - [05/Dec/2016:09:10:00 +0530] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [05/Dec/2016:09:10:28 +0530] "GET /MessangerDemo/ HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [05/Dec/2016:09:12:52 +0530] "POST /MessangerDemo/webapi/messages HTTP/1.1" 200 118
+0:0:0:0:0:0:0:1 - - [05/Dec/2016:09:17:33 +0530] "POST /MessangerDemo/webapi/messages HTTP/1.1" 200 237
+127.0.0.1 - - [05/Dec/2016:22:19:50 +0530] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [05/Dec/2016:22:19:52 +0530] "GET /MessangerDemo/ HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [05/Dec/2016:22:20:58 +0530] "POST /MessangerDemo/webapi/messages HTTP/1.1" 200 121

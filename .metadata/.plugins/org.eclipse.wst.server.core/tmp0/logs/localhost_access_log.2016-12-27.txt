@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [27/Dec/2016:15:22:35 +0530] "POST /MessangerDemo/webapi/comments/addComment/5 HTTP/1.1" 200 258
+0:0:0:0:0:0:0:1 - - [27/Dec/2016:15:22:49 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 581
+0:0:0:0:0:0:0:1 - - [27/Dec/2016:15:24:25 +0530] "POST /MessangerDemo/webapi/comments/addComment/5 HTTP/1.1" 200 378
+0:0:0:0:0:0:0:1 - - [27/Dec/2016:15:24:29 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 689

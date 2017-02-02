@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package io.demo;
+
+/**
+ * @author Avinash
+ *
+ */
+public interface Greeting {
+void perform(int);
+}

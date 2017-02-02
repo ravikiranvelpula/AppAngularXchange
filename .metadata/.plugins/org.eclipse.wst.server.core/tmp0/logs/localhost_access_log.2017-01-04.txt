@@ -1,0 +1,17 @@
+127.0.0.1 - - [04/Jan/2017:22:37:46 +0530] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:37:48 +0530] "GET /MessangerDemo/ HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:38:30 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:38:30 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:39:03 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:39:30 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:39:37 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:39:47 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:40:10 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:47:08 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:47:43 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:47:51 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:47:52 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:47:52 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:48:16 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:48:41 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:22:48:48 +0530] "GET /MessangerDemo/webapi/posts/getAllPosts HTTP/1.1" 200 697

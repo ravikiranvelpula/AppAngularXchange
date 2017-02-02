@@ -1,0 +1,41 @@
+/**
+ * 
+ */
+package io.demo;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
+/**
+ * @author Avinash
+ *
+ */
+public class Greeter {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Greeting  myLambdaexp = () -> System.out.println("Hello World");
+		myLambdaexp.perform();
+		List<Student> students = Arrays.asList(
+							new Student(9001, "Avinash", "Singh"),
+							new Student(9002, "Akash", "Singh"),
+							new Student(9003, "Ankit", "Tiwari")
+							);
+		//printConditionally(students,(Student s)->true);
+		printConditionally(students,(s)->s.getSecondName().startsWith("S"),s->System.out.println(s.getSecondName()));
+		printConditionally(students,(s)->s.getFirstName().startsWith("A"),s->System.out.println(s.getFirstName()));
+		
+		
+		
+	}
+	public static void printConditionally(List<Student> list,Predicate<Student> predicate,Consumer<Student> consumer){
+		for(Student s : list){
+			if(predicate.test(s))
+				consumer.accept(s);
+		}
+	}
+}
