@@ -8,6 +8,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import org.avinash.demo.MessangerDemo.model.PostEntity;
@@ -20,14 +21,16 @@ public class PostResourceRepository {
 	EntityManagerFactory emf = Persistence.createEntityManagerFactory("MessangerDemo");
 	EntityManager em = emf.createEntityManager();
 	
+	//@PersistenceContext
+	//EntityManager em	
 	
 	public PostEntity addPost(PostEntity post) {
-		em.getTransaction().begin();
+		//em.getTransaction().begin();
 		if(post.getPostId()==0)
 		em.persist(post);
 		else
 		em.merge(post);
-		em.getTransaction().commit();
+	//	em.getTransaction().commit();
 		return getPost(post.getPostId());
 
 	}
@@ -39,7 +42,7 @@ public class PostResourceRepository {
 		TypedQuery<PostEntity> postQuery = em.createQuery("SELECT post FROM PostEntity post",PostEntity.class);
 		posts = postQuery.getResultList();
 		em.getTransaction().commit();
-				return posts;
+		return posts;
 	}
 	
 	
