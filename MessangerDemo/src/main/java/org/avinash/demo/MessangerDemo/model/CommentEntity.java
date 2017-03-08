@@ -1,5 +1,7 @@
 package org.avinash.demo.MessangerDemo.model;
-
+/**
+ * Comment Entity
+ */
 import java.util.Date;
 
 import javax.persistence.Entity;
