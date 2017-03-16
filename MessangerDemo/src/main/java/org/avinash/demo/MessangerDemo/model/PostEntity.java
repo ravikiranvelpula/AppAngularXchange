@@ -1,5 +1,5 @@
 /**
- * 
+ * Post Entity class
  */
 package org.avinash.demo.MessangerDemo.model;
 
