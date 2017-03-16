@@ -1,5 +1,5 @@
 /**
- * 
+ * Enum check status class
  */
 package org.avinash.demo.MessangerDemo.dao;
 
