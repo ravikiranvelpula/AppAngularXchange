@@ -1,5 +1,5 @@
 /**
- * 
+ * Feature changes in enum
  */
 package org.avinash.demo.MessangerDemo.dao;
 
