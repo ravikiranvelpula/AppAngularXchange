@@ -1,10 +1,11 @@
 /**
- * COMMENTING DONE
+ * Feature changes in enum
  */
 package org.avinash.demo.MessangerDemo.dao;
 
 /**
- * @author Avinash
+ * @author Avinash 
+ * Class is for status
  *
  */
 public enum CheckStatus {
